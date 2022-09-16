@@ -6,18 +6,20 @@
 
 En la terminal:
 
-- Instalamos "npx create-react-app todolist" para crear automáticamente la parte de backend del proyecto.
+- Se instala "npx create-react-app todolist" para crear automáticamente la parte de backend del proyecto.
 
-- Instalamos la extensión de VisualCode ES7+ React/Redux/React-Native para tener atajos de teclado.
+- Se instala la extensión de VisualCode ES7+ React/Redux/React-Native para tener atajos de teclado.
 
-- Instalamos una extensión de chrome "React Developer Tools" para visualizar el arbol de componentes
+- Se instala una extensión de chrome "React Developer Tools" para visualizar el arbol de componentes
 
 - Se arranca el servidor para comprobar que funciona correctamente con "npm start".
+
+- Se instala un generador de carpetas: "npm i --save-dev create-react-component-folder"
+
 
 En la carpeta public:
 
 - Cambiamos el favicon, sustituyendo la imagen que queramos con el mismo nombre del que ya existe.
-
 
 
 # Getting Started with Create React App
