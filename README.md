@@ -14,28 +14,36 @@
 
 - Se instala un generador de carpetas: "npm i --save-dev create-react-component-folder"
 
+- Se crea la estructura de carpetas, en función del diseño planteado: "npx crcf src/components/Header Main Footer List Item -j"
+
+- Se anida manualmente la carpeta creada "Item" dentro de "List", y a continuación, "List" dentro de "Main"
+
+## Conexión entre el DOM "real" y el DOM "virtual"
+
+[index.js] 
+
 
 ## Diseño de la estructura de carpetas:
 
 - App
     - Header
-        - Img
-        - Nav
-        - Img
-        - Img
     - Main
         - ProductList
             - ProductItem*3
-        - ReviewList
-            - ReviewItem*2
     - Footer
-        - Nav
-        - Nav
+
 
 
 En la carpeta public:
 
 - Cambiamos el favicon, sustituyendo la imagen que queramos con el mismo nombre del que ya existe.
+
+
+
+
+
+
+
 
 
 # Getting Started with Create React App
