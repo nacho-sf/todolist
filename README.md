@@ -17,20 +17,20 @@
 
 ## Diseño de la estructura de carpetas:
 
-App
-    Header
-        Img
-        Nav
-        Img
-        Img
-    Main
-        ProductList
-            ProductItem*3
-        ReviewList
-            ReviewItem*2
-    Footer
-        Nav
-        Nav
+1. App
+    - Header
+        - Img
+        - Nav
+        - Img
+        - Img
+    - Main
+        - ProductList
+            - ProductItem*3
+        - ReviewList
+            - ReviewItem*2
+    - Footer
+        - Nav
+        - Nav
 
 
 En la carpeta public:
