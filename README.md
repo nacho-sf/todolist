@@ -20,19 +20,42 @@
 
 ## Conexión entre el DOM "real" y el DOM "virtual"
 
-`index.js` es el archivo que conecta:
 
-- El archivo de componentes `App.js` (Header, Main, Footer)
-
-- El elemento "root" en `index.html`
-
-### index.html:
+### public/index.html:
 
 ```
 <div id="root"></div>
 ```
+Aquí se encuentra el elemento "root" del que cuelga todo el contenido.
 
+### src/index.js:
 
+```
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+Es el archivo que conecta el "root" (DOM real) con "App" (DOM virtual).
+
+### src/App.js:
+
+```
+function App() {
+  return (
+    <div className="App">
+      <Header/>
+      <Main/>
+      <Footer/>
+    </div>
+  );
+}
+```
+El archivo con los componentes "Header", "Main" y "Footer", será lo que se renderiza.
 
 ## Diseño de la estructura de carpetas:
 
