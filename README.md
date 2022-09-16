@@ -17,7 +17,7 @@
 
 ## Diseño de la estructura de carpetas:
 
-1. App
+- App
     - Header
         - Img
         - Nav
