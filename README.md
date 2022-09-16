@@ -20,7 +20,18 @@
 
 ## Conexión entre el DOM "real" y el DOM "virtual"
 
-[index.js] 
+`index.js` es el archivo que conecta:
+
+- El archivo de componentes `App.js` (Header, Main, Footer)
+
+- El elemento "root" en `index.html`
+
+### index.html:
+
+```
+<div id="root"></div>
+```
+
 
 
 ## Diseño de la estructura de carpetas:
