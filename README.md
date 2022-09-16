@@ -1,3 +1,25 @@
+# Documentación del desarrollo del ejercicio
+
+
+
+- Abrimos Visual y nos situamos en la carpeta donde queramos crear la carpeta del proyecto.
+
+En la terminal:
+
+- Instalamos "npx create-react-app todolist" para crear automáticamente la parte de backend del proyecto.
+
+- Instalamos la extensión de VisualCode ES7+ React/Redux/React-Native para tener atajos de teclado.
+
+- Instalamos una extensión de chrome "React Developer Tools" para visualizar el arbol de componentes
+
+- Se arranca el servidor para comprobar que funciona correctamente con "npm start".
+
+En la carpeta public:
+
+- Cambiamos el favicon, sustituyendo la imagen que queramos con el mismo nombre del que ya existe.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
