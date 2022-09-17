@@ -12,9 +12,11 @@
 
 - Se instala una extensión de chrome "React Developer Tools" para visualizar el arbol de componentes
 
+- Se instala un generador de id's únicos: "npm i uuid".
+
 - Se instala un generador de carpetas: "npm i --save-dev create-react-component-folder"
 
-- Se crea la estructura de carpetas, en función del diseño planteado: "npx crcf src/components/Header Main Footer List Item -j"
+- Se crea la estructura de carpetas, en función del diseño planteado: "npx crcf src/components/Header Main Footer List Item -j". Estos ya vendrán con sus archivos *.jsx y sus componentes de clase respectivos creados automáticamente. Si no, se pueden crear rapidamente, pero de forma manual, con el atajo de teclado "rce".
 
 - Se anida manualmente la carpeta creada "Item" dentro de "List", y a continuación, "List" dentro de "Main"
 
@@ -55,7 +57,7 @@ function App() {
   );
 }
 ```
-El archivo con los componentes "Header", "Main" y "Footer", será lo que se renderiza.
+El archivo con los componentes "Header", "Main" y "Footer", que será lo que se renderize.
 
 ## Diseño de la estructura de carpetas:
 
