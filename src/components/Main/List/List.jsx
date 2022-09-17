@@ -10,9 +10,9 @@ export class List extends Component {
   //Constructor para guardar el objeto en State
   constructor(props) {
     super(props)
-    
-    this.image = React.createRef();
 
+    this.image = React.createRef();
+    
     this.state = {
       items:data
     }
@@ -44,6 +44,8 @@ export class List extends Component {
     const newItem = {title,description,date,category,site,image};
     this.setState({items:[newItem,...this.state.items]}) // [{},{},{}] --> [{},{},{},{newProduct}]
   }
+  
+
 
   //Método para renderizar tareas
   render() {
@@ -65,9 +67,13 @@ export class List extends Component {
           <input type="url" id="image" name="image" ref={this.image} /><br />
           <input type="submit" value="Añadir" /><br />
         </form>
+
         {this.paintItems()}
+
         {this.state.items.length?<button onClick={this.deleteItems}>Borrar items</button>:""}
+
         <button onClick={this.resetItems}>Recargar tareas</button>
+
       </section>
     );
   };
