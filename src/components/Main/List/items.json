@@ -1,5 +1,3 @@
 [
-    {"title":"Tarea 1", "description":"Descripción 1", "date":"Fecha 1", "category":"Cat 1", "site":"Loc 1"},
-    {"title":"Tarea 2", "description":"Descripción 2", "date":"Fecha 2", "category":"Cat 2", "site":"Loc 2"},
-    {"title":"Tarea 3", "description":"Descripción 3", "date":"Fecha 3", "category":"Cat 3", "site":"Loc 3"}
+    {"title":"Tarea ejemplo", "description":"Descripción de ejemplo", "date":"Fecha de ejemplo", "category":"Categoría de ejemplo", "site":"Ubicación de ejemplo"}
 ]

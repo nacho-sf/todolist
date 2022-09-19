@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import './List.css'
 
 import Item from "./Item";
 import data from "./items.json"
@@ -11,6 +12,11 @@ export class List extends Component {
   constructor(props) {
     super(props)
 
+    this.title = React.createRef();
+    this.description = React.createRef();
+    this.date = React.createRef();
+    this.category = React.createRef();
+    this.site = React.createRef();
     this.image = React.createRef();
     
     this.state = {
@@ -35,37 +41,46 @@ export class List extends Component {
 
   addItem = (event) => {
     event.preventDefault();
-    const title = event.target.title.value;
-    const description = event.target.description.value;
-    const date = event.target.date.value;
-    const category = event.target.category.value;
-    const site = event.target.site.value;
-    const image = this.image.current.value; //Leer campo por referencia
-    const newItem = {title,description,date,category,site,image};
-    this.setState({items:[newItem,...this.state.items]}) // [{},{},{}] --> [{},{},{},{newProduct}]
+    
+    let title = this.title.current.value;
+    let description = this.description.current.value;
+    let date = this.date.current.value;
+    let category = this.category.current.value;
+    let site = this.site.current.value;
+    let image = this.image.current.value;
+    let newItem = {title,description,date,category,site,image};
+
+    this.setState({items:[newItem,...this.state.items]})
+
+    title = this.title.current.value="";
+    description = this.description.current.value="";
+    date = this.date.current.value="";
+    category = this.category.current.value="";
+    site = this.site.current.value="";
+    image = this.image.current.value="";
   }
-  
 
 
   //Método para renderizar tareas
   render() {
     return (
       <section>
-        <h1>Añadir item</h1>
-        <form onSubmit={this.addItem}>
-          <label htmlFor="title">Título:</label><br />
-          <input type="text" id="title" name="title" /><br />
-          <label htmlFor="description">Descripción:</label><br />
-          <input type="text" id="description" name="description" /><br />
-          <label htmlFor="date">Fecha y hora:</label><br />
-          <input type="text" id="date" name="date" /><br />
-          <label htmlFor="category">Categoría:</label><br />
-          <input type="text" id="category" name="category" /><br />
-          <label htmlFor="site">Ubicación:</label><br />
-          <input type="text" id="site" name="site" /><br />
-          <label htmlFor="image">URL imágen:</label><br />
-          <input type="url" id="image" name="image" ref={this.image} /><br />
-          <input type="submit" value="Añadir" /><br />
+        <h1 className="main_title">Añade una tarea</h1>
+        <form onSubmit={this.addItem} className="form_box">
+          
+          <input type="text" id="title" name="title" placeholder="Título..." className="input_title" ref={this.title}/>
+
+          <input type="text" id="category" name="category" placeholder="Categoría..." className="input_category" ref={this.category}/>
+          
+          <input type="date" id="date" name="date" placeholder="Fecha..." className="input_date" ref={this.date}/>
+
+          <textarea type="textarea" id="description" name="description" placeholder="Descripción..." className="input_description" ref={this.description}/>
+          
+          <input type="text" id="site" name="site" placeholder="Ubicación..." className="input_site" ref={this.site}/>
+          
+          <input type="url" id="image" name="image" placeholder="URL imagen..." className="input_image" ref={this.image} />
+          
+          <input type="submit" value="Añadir" className="button_form" />
         </form>
 
         {this.paintItems()}
